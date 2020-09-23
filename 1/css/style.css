@@ -1,0 +1,293 @@
+html{
+    scroll-behavior: smooth;
+}
+body{font-family: 'Titillium Web', sans-serif;}
+h1{
+    font-size: 42px;
+}
+h2{
+    font-size: 40px;
+}
+h3{
+    font-size: 24px;
+}
+h4{
+    font-size: 21px;
+}
+p, a{
+    font-size: 18px;
+}
+/* Start Header Section */
+.header-section{
+    background-color: #87509c;
+    padding-top: 2%;
+    height: 80vh;
+}
+.header-section .fixed-top{
+    background-color: #87509c;
+    padding: 20px 0;
+}
+.navbar-light .navbar-nav .nav-link:link,
+.navbar-light .navbar-nav .nav-link:visited {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 3px 18px;
+    margin: 0 5px;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    background-color: #643a79;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.header-content{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header-content h1{
+    font-weight: bolder;
+    color: #fff;
+}
+.header-content .btn-custom{
+    background-color: #eb7d4b;
+    border-bottom: 5px solid #c86a40;
+}
+.btn-custom{
+    width: 295px;
+    margin-top: 65px;
+    padding: 20px 0px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+/* End Header Section */
+
+/* Start Service Section */
+.service{
+    background-color: rgb(23, 194, 164);
+    color: #e0f7f3;
+}
+.section-padding{
+    padding: 5% 0;
+}
+.title{
+    text-align: center;
+    width: 60%;
+    clear: both;
+}
+
+.title .title-item{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.title .title-item::after{
+    content: "";
+    width: 100px;
+    height: 5px;
+    background-color: #14a58c;
+    display: block;
+    margin: 10px auto;
+}
+.card-custom{
+    background-color: unset;
+    border: none;
+}
+.card-custom {
+    width: 300px;
+}
+.card-custom img{
+    width: 125px;
+    height: 125px;
+    margin: 0 auto;
+}
+.card-custom .card-title{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+/* End Service Section */
+
+/* Start Team Section */
+.team{
+    background-color: #e7f1f8;
+}
+.team .title .title-item::after{
+    background-color: #c8d9e5;
+}
+
+.team .card-custom img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.team .card-custom .card-designation {
+    color: #48c1e9;
+    text-transform: capitalize;
+}
+.team .card-custom .card-social-media i{
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: #bdd1df;
+    padding: 10px;
+    font-size: 20px;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+.team .card-custom .card-social-media i:hover{
+    color: #000;
+    background-color: #bdd1df;
+    transition: .5s;
+    transform: rotate(360deg);
+}
+/* End Team Section */
+/* Start Skill Section */
+.skill .title .title-item::after {
+    background-color: #dfe8ed;
+}
+.skill .row {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80em;
+    padding: 1em;
+}
+svg.radial-progress {
+    max-width: unset;
+}
+svg.radial-progress text {
+    fill: unset;
+    font-size: 20px;
+    font-weight: 100;
+}
+svg.radial-progress circle {
+    stroke-width: 5;
+}
+svg.radial-progress.web-design circle{ stroke:rgb(48, 186, 231); }
+svg.radial-progress.html-css circle{ stroke:#d74680; }
+svg.radial-progress.graphic-design circle{ stroke:#15c7a8; }
+svg.radial-progress.ui-ux circle{ stroke:#eb7d4b; }
+
+/* End Skill Section */
+
+/* Start Portfolio Section */
+.portfolio{
+    background-color: #ffdd99;
+}
+.portfolio .title .title-item::after{
+    background-color: #e5c37f;
+}
+.portfolio .filter-button-group button{
+    margin: 5px;
+    border-radius: 5px;
+    background-color: rgb(235, 201, 133);
+    padding: 5px 30px;
+    text-transform: uppercase;
+    border: none;
+}
+.portfolio .filter-button-group button:hover{
+    box-shadow: inset 0 0 3px rgb(0, 0, 0);
+    transition: .5s;
+}
+.portfolio .filter-button-group button.active{
+    background-color: #ffffff;
+    outline: none;
+}
+.portfolio .filter-button-group button:focus
+.portfolio .filter-button-group button.active:focus{
+    outline: none;
+}
+.portfolio .btn-section{
+    display: block;
+    margin-left: 50%;
+}
+.portfolio .btn-custom{
+    background-color: rgba(23, 194, 164, 1);
+    border-bottom: 5px solid rgb(20, 165, 140);
+    display: inline-block;
+}
+/* End Portfolio Section */
+
+/* Start About Us Section */
+.about-us{
+    background-color: rgb(215, 70, 128);
+    color: rgb(255, 255, 255);
+}
+.about-us .title .title-item::after{
+    background-color: rgb(183, 60, 109);
+}
+.about-us .media img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.about-us .media h4{
+    color: rgb(252, 243, 247);
+}
+
+.about-us .media h3{
+    font-weight: 600;
+}
+
+.about-us .media p{
+    color: rgb(255, 221, 153);
+}
+/* End About Us Section */
+
+/* Start Contact Us Section */
+.contact-us{
+    background-color: rgb(60, 84, 153);
+    color: rgb(255, 255, 255);
+}
+.contact-us .title .title-item::after{
+    background-color: rgb(39, 58, 113);
+}
+.contact-us form
+{
+    width: 75%;
+    margin: 0 auto;
+}
+.contact-us form .form-control
+{
+    color: #fff;
+    background-color: #273a71;
+    border: none;
+}
+.contact-us form .form-control:focus
+{
+    box-shadow: none;
+}
+.contact-us form .form-control::placeholder
+{
+    color: #fff;
+}
+.contact-us form input
+{
+    height: 50px;
+}
+.contact-us .btn-custom
+{
+    background-color: #30bae7;
+    border-bottom: 5px solid #299ec5;
+}
+/* End Contact Us Section */
+
+/* Start Social Media Section */
+.social-media{
+    background-color: #344b8e;
+    color: rgb(255, 255, 255);
+}
+.social-media ul li a:link,
+.social-media ul li a:visited
+{
+    color: #fff;
+    text-decoration: none;
+}
+.social-media ul li a:hover{
+    color: #30bae7;
+}
+/* End Social Media Section */
+

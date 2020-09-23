@@ -1,0 +1,166 @@
+/* ---------------------------------------Braking point 1024px------------------------------------------ */
+@media (max-width: 1024px){
+    /* Start Header Section */
+    .header-section{
+        height: 60vh;
+    }
+    .header-section nav.navbar{
+        box-sizing: content-box;
+    }
+    .header-content {
+        position: unset;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-top: 15%;
+    }
+    /* End Header Section */
+    
+    /* Start Service Section */
+    .card-custom {
+        width: auto;
+    }
+    .card-custom .card-title {
+        height: 50px;
+    }
+    /* End Service Section */
+    
+    /* Start Team Section */
+    
+    .team .card-custom .card-social-media i {
+        width: 30px;
+        height: 30px;
+        color: #fff;
+        background-color: #bdd1df;
+        padding: 8px 5px;
+        font-size: 15px;
+        margin: 0 3px;
+        border-radius: 50%;
+    }
+    /* End Team Section */
+    
+    /* Start About Us Section */
+    .about-us .media img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: 10px !important;
+    }
+    /* End About Us Section */
+}
+/* ---------------------------------------Braking point 768px------------------------------------------ */
+@media (max-width: 768px){
+    /* Start Header Section */
+    .header-section nav.navbar .navbar-brand{
+        text-align: center;
+        padding: 25px;
+    }
+    .header-section .fixed-top {
+        padding: 0px 0;
+    }
+    .header-section .navbar .navbar-collapse.collapse.show .nav-link{
+        text-align: center;
+        padding: 10px;
+    }
+    .header-section .navbar-light .navbar-toggler{
+        border: none;
+    }
+    .header-section .navbar button:focus {
+        outline: unset;
+    }
+    /* End Header Section */
+    
+    /* Start Service Section */
+    .title {
+        width: 80%;
+    }
+    .team .card-custom .card-social-media i {
+        width: 40px !important;
+        height: 40px !important;
+        color: #fff !important;
+        background-color: #bdd1df !important;
+        padding: 10px !important;
+        font-size: 20px !important;
+        margin: 0 5px !important;
+        border-radius: 50% !important;
+    }
+    .card-custom .card-title {
+        height: auto;
+    }
+    /* End Service Section */
+}
+
+/* ---------------------------------------Braking point 425px------------------------------------------ */
+@media (max-width: 425px){
+    
+    h1{
+        font-size: 37px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    
+    /* Start Header Section */
+    .header-section{
+        height: 65vh;
+    }
+    .header-section nav.container {
+        width: auto;
+    }
+    .header-section nav.navbar .navbar-brand{
+        padding: 15px 0px;
+    }
+    .header-content {
+        margin-top: 35%;
+    }
+    /* End Header Section */
+    
+    /* Start Service Section */
+    .section-padding {
+        padding: 10% 0;
+    }
+    .title {
+        width: 100%;
+    }
+    /* End Service Section */
+    
+    /* Start About Us Section */
+    .about-us .media .media-body {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    /* End About Us Section */
+    
+    /* Start Portfolio Section */
+    .portfolio .filter-button-group button {
+        margin: 0px;
+    }
+    /* End Portfolio Section */
+    
+    /* Start Contact Us Section */
+    .contact-us form {
+        width: 100%;
+    }
+    /* Start Contact Us Section */
+    
+    /* Start Footer Section */
+    .footer-mobile{
+        display: block !important;
+    }
+    .footer-desktop{
+        display: none;
+    }
+    /* End Footer Section */
+}
+
+/* ---------------------------------------Braking point 375PX------------------------------------------ */
+@media (max-width: 375px){
+    
+    /* Start Portfolio Section */
+    .portfolio .filter-button-group button {
+        padding: 5px 15px;
+    }
+    /* End Portfolio Section */
+}
+
+
