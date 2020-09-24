@@ -48,12 +48,14 @@
     }
     /* End About Us Section */
 }
+
+
 /* ---------------------------------------Braking point 768px------------------------------------------ */
 @media (max-width: 768px){
     /* Start Header Section */
     .header-section nav.navbar .navbar-brand{
         text-align: center;
-        padding: 25px;
+        padding: 5px 0;
     }
     .header-section .fixed-top {
         padding: 0px 0;
@@ -65,8 +67,44 @@
     .header-section .navbar-light .navbar-toggler{
         border: none;
     }
-    .header-section .navbar button:focus {
+    .header-section .navbar button:focus,
+    .nav-mobile button:focus{
         outline: unset;
+    }
+    
+    .nav-mobile.active{
+        display: block !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .97);
+        transition: .5s;
+    }
+    .nav-mobile button{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        background: none;
+        border: none;
+    }
+    .nav-mobile button i{
+        font-size: 25px;
+    }
+    .nav-mobile .navbar-nav{
+        margin-top: 20%;
+    }
+    .nav-mobile ul li a{
+        text-align: center;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, .5);
+    }
+    .nav-mobile ul li a:hover{
+        color: rgba(255, 255, 255, 1);
+    }
+    .nav-mobile ul li{
+        padding: 10px 0;
     }
     /* End Header Section */
     
@@ -90,6 +128,29 @@
     /* End Service Section */
 }
 
+/* ---------------------------------------Braking point 540px------------------------------------------ */
+@media (max-width: 540px){
+    
+    /* Start Header Section */
+    .header-section {
+        height: 67vh;
+    }
+    .header-section .navbar-light .navbar-toggler {
+        margin-right: 30px;
+    }
+    /* End Header Section */
+    
+    /* Start Footer Section */
+    .footer-mobile{
+        display: block !important;
+    }
+    .footer-desktop{
+        display: none;
+    }
+    /* End Footer Section */
+    
+}
+
 /* ---------------------------------------Braking point 425px------------------------------------------ */
 @media (max-width: 425px){
     
@@ -107,11 +168,11 @@
     .header-section nav.container {
         width: auto;
     }
-    .header-section nav.navbar .navbar-brand{
-        padding: 15px 0px;
-    }
     .header-content {
         margin-top: 35%;
+    }
+    .header-section .navbar-light .navbar-toggler {
+        margin-right: 0;
     }
     /* End Header Section */
     
@@ -142,19 +203,36 @@
         width: 100%;
     }
     /* Start Contact Us Section */
+}
+
+/* ---------------------------------------Braking point 414PX------------------------------------------ */
+@media (max-width: 414px){
     
-    /* Start Footer Section */
-    .footer-mobile{
-        display: block !important;
+    /* Start Header Section */
+    .header-section{
+        height: 78vh;
     }
-    .footer-desktop{
-        display: none;
+    /* End Header Section */
+}
+
+/* ---------------------------------------Braking point 411PX------------------------------------------ */
+@media (max-width: 411px){
+    
+    /* Start Header Section */
+    .header-section{
+        height: 78vh;
     }
-    /* End Footer Section */
+    /* End Header Section */
 }
 
 /* ---------------------------------------Braking point 375PX------------------------------------------ */
 @media (max-width: 375px){
+    
+    /* Start Header Section */
+    .header-section{
+        height: 70vh;
+    }
+    /* End Header Section */
     
     /* Start Portfolio Section */
     .portfolio .filter-button-group button {
@@ -163,4 +241,23 @@
     /* End Portfolio Section */
 }
 
+/* ---------------------------------------Braking point 360PX------------------------------------------ */
+@media (max-width: 360px){
+    
+    /* Start Header Section */
+    .header-section{
+        height: 85vh;
+    }
+    /* End Header Section */
+}
+
+/* ---------------------------------------Braking point 320PX------------------------------------------ */
+@media (max-width: 320px){
+    
+    /* Start Header Section */
+    .header-section{
+        height: 100vh;
+    }
+    /* End Header Section */
+}
 
