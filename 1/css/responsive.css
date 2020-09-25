@@ -72,7 +72,7 @@
         outline: unset;
     }
     
-    .nav-mobile.active{
+    .nav-mobile{
         display: block !important;
         position: absolute;
         top: 0;
@@ -81,6 +81,9 @@
         height: 100vh;
         background-color: rgba(0, 0, 0, .97);
         transition: .5s;
+    }
+    .nav-mobile .navbar-nav{
+        display: none;
     }
     .nav-mobile button{
         position: absolute;

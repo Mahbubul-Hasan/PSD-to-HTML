@@ -10,13 +10,12 @@ $('.filter-button-group').on('click', 'button', function () {
     $grid.isotope({ filter: filterValue });
 });
 
+// mobile navbar
 $(".navbar").on("click", "button", function () {
-    $(".nav-mobile").addClass("active");
-    $(".nav-mobile").css("width", "100%");
+    $(".nav-mobile").css({ "width": "100%", "display": "block"});
+    $(".nav-mobile .navbar-nav").css("display", "block");
 })
-$(".nav-mobile").on("click", "button", function () {
-    $(".nav-mobile").removeClass("active");
-})
-$(".nav-mobile .nav-link").on("click", function () {
-    $(".nav-mobile").removeClass("active");
+$(".nav-mobile button, .nav-mobile .nav-link").on("click", function () {
+    $(".nav-mobile").css({ "width": "0", "display": "none" });
+    $(".nav-mobile .navbar-nav").css("display", "none");
 })
