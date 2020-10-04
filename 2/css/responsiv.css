@@ -1,0 +1,95 @@
+@media only screen and (max-width: 1920px) {
+    .section-box-nine {
+        height: 300px;
+    }
+    .section-box-nine figure {
+        margin: 13% 0;
+    }
+}
+@media only screen and (max-width: 1440px) {
+    .section-box-nine {
+        height: 280px;
+    }
+    .section-box-nine figure {
+        margin: 5% 0;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .protfolio .protfolio-img .col-md-4{
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+    .section-box-nine {
+        height: 300px;
+    }
+    .section-box-nine figure {
+        margin: 12% 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .countup .row:nth-child(1) .col-lg-3.col-md-6.col-12.mt-3,
+    .countup .row:nth-child(2) .col-lg-3.col-md-6.col-12.mt-3{
+        margin-top: 0 !important;
+        margin-bottom: 12px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .protfolio .protfolio-img .col-md-4{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .header-content{
+        padding: 25% 10px;
+    }
+    .header-content article h6{
+        margin-top: 15px;
+    }
+    .header-content article .btn-custom{
+        margin-top: 15px !important;
+    }
+    .info{
+        padding: 8% 15px;
+    }
+    .headline {
+        width: 100%;
+    }
+    .section-padding {
+        padding: 10% 0;
+    }
+    .protfolio-subject{
+        display: none;
+    }
+    .protfolio .protfolio-img .col-md-4 {
+        flex: unset; 
+        max-width: unset; 
+    }
+    .section-box-nine {
+        height: 400px;
+    }
+    .section-box-nine figure {
+        margin: 20% 0;
+    }
+    .section-box-nine figure div {
+        padding: 25px;
+    }
+    
+    .popup-video .btn-custom {
+        letter-spacing: 7px;
+        font-size: 12px;
+        padding: 15px 3%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .section-box-nine {
+        height: 350px;
+    }
+    .section-box-nine figure {
+        margin: 14% 0;
+    }
+}
