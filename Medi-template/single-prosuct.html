@@ -1,0 +1,663 @@
+<!doctype html>
+<html>
+<head>
+    <title>Online Pharmacy India | Buy Medicines from India's Trusted Medicine Store: 1mg.com</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/forms/dist/forms.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+    <link rel="stylesheet" href="./css/xzoom.css" media="all"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body class="bg-gray-100">
+    
+    <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 border-b">
+        <div x-data="{ open: false }" class="flex flex-col mx-auto md:items-center md:justify-between md:flex-row md:px-6">
+            <div class="px-2 sm:px-4 flex flex-row items-center justify-between">
+                <a href="#"><img src="./img/da93313e-8d98-11eb-b7ca-02186d684e20.png" alt="1mg" class="w-24"></a>
+                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{'flex': open, 'hidden': !open}" class="flex md:flex flex-col md:flex-row flex-grow pb-4 md:pb-0 hidden justify-between md:ml-12 px-2">
+                <ul class="w-full md:w-3/5 flex flex-col md:flex-row">
+                    <li><a class="tracking-tighter uppercase px-4 py-2 mt-2 text-base font-bold hover:text-red-400 transition duration-300 ease-in-out" href="#">Medicines</a></li>
+                    <li><a class="tracking-tighter uppercase px-4 py-2 mt-2 text-base font-bold hover:text-red-400 transition duration-300 ease-in-out" href="#">Lab Tests</a></li>
+                    <li><a class="tracking-tighter uppercase px-4 py-2 mt-2 text-base font-bold hover:text-red-400 transition duration-300 ease-in-out" href="#">Ask Doctor</a></li>
+                    <li><a class="tracking-tighter uppercase px-4 py-2 mt-2 text-base font-bold hover:text-red-400 transition duration-300 ease-in-out" href="#">COVID-19</a></li>
+                    <li><a class="tracking-tighter uppercase px-4 py-2 mt-2 text-base font-bold hover:text-red-400 transition duration-300 ease-in-out" href="#">Ayurveda</a></li>
+                </ul>
+                <ul class="w-full md:w-2/5 pt-3 md:pt-0 flex flex-col md:flex-row md:justify-end">
+                    <li>
+                        <a class="pl-4 py-2 mt-2 text-xs font-semibold hover:text-red-400" href="#">Login | </a>
+                        <a class="py-2 mt-2 text-xs font-semibold hover:text-red-400" href="#">Sign Up</a>
+                    </li>
+                    <li><a class="px-4 py-2 mt-2 text-xs font-semibold hover:text-red-400" href="#">Offers</a></li>
+                    <li><a class="px-4 py-2 mt-2 text-lg font-semibold hover:text-red-400" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a class="px-4 py-2 mt-2 text-xs font-semibold hover:text-red-400" href="#">Need help?</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="bg-white">
+        <div class="flex flex-wrap mx-2 sm:mx-10">
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        All Medicines<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        COVID Test & Prevention<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        Featured<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        Fitness & Supplements<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        Diabetes<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        Healthcare Devices<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        Personal Care<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        Health Conditions<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        Ayurveda Products<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        Homeopathy<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <main>
+        <section class="bg-white">
+            <div class="mx-2 sm:px-10 py-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <section id="default" class="padding-top0">
+                        <div class="row">
+                            <div class="large-5 column">
+                                <div class="xzoom-container">
+                                    <img class="xzoom" id="xzoom-default" src="images/gallery/preview/01_b_car.jpg" xoriginal="images/gallery/original/01_b_car.jpg" />
+                                    <div class="xzoom-thumbs flex">
+                                        <a href="images/gallery/original/01_b_car.jpg"><img class="xzoom-gallery" width="80" src="images/gallery/thumbs/01_b_car.jpg"  xpreview="images/gallery/preview/01_b_car.jpg"></a>
+                                        <a href="images/gallery/original/02_o_car.jpg"><img class="xzoom-gallery" width="80" src="images/gallery/preview/02_o_car.jpg"></a>
+                                        <a href="images/gallery/original/03_r_car.jpg"><img class="xzoom-gallery" width="80" src="images/gallery/preview/03_r_car.jpg"></a>
+                                        <a href="images/gallery/original/04_g_car.jpg"><img class="xzoom-gallery" width="80" src="images/gallery/preview/04_g_car.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <div>
+                        <div>
+                            <h2 class="text-xl font-bold">1mg Calcium + Vitamin D3 Joint Health & Immunity Zinc, Magnesium and Alfalfa Tablet</h2>
+                            <p class="text-xs font-medium capitalize text-red-400 my-1">1MG Healthcare Solutions Private Limited</p>
+                            <p><span class="text-xs text-white bg-green-500 rounded px-1.5 py-0.5 mr-2">4.9 <i class="far fa-star"></i></span> <span class="text-sm font-medium capitalize text-red-400">426 Ratings & 245 Reviews</span></p>
+                        </div>
+                        <div>
+                            <h4 class="text- mt-3">Product Highlights</h4>
+                            <ul class="list-disc list-inside">
+                                <li class="text-sm">Helps in maintaining healthy bones and teeth</li>
+                                <li class="text-sm">Reduces the risk of Osteoporosis and Rickets</li>
+                                <li class="text-sm">Helps in preventing calcium deficiency</li>
+                                <li class="text-sm">Aids in improving the absorption of calcium in the body</li>
+                                <li class="text-sm">Promotes flexibility and mobility of joints</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="mt-5">Combo packs for this product</h3>
+                            <div class="border border-gray-200 mt-5 relative">
+                                <p class="absolute px-1.5 py-0.5 text-white -top-3 -left-2 bg-green-500 text-xs">Additional discount</p>
+                                <div class="flex justify-between items-center p-5">
+                                    <div class="">
+                                        <h5 class="font-semibold">Pack of 2</h5>
+                                        <img src="./img/k7regmdcvyoy0fo5grcd.png" alt="1mg Calcium + Vitamin D3 Joint Health & Immunity Zinc, Magnesium and Alfalfa Tablet" class="w-14">
+                                    </div>
+                                    <div class="text-right">
+                                        <h5 class="font-semibold">₹547.4</h5>
+                                        <p class="text-xs text-green-500">54% off <span class="text-gray-500">MRP <span class="line-through">₹1190</span></span></p>
+                                        <button class="bg-red-400 px-5 py-2 shadow-sm font-medium tracking-wider border text-red-100 rounded-lg hover:shadow-lg hover:bg-red-600">Buy Pack</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-gray-200 mt-5 relative">
+                                <p class="absolute px-1.5 py-0.5 text-white -top-3 -left-2 bg-green-500 text-xs">Additional discount</p>
+                                <div class="flex justify-between items-center p-5">
+                                    <div class="">
+                                        <h5 class="font-semibold">Pack of 3</h5>
+                                        <img src="./img/k7regmdcvyoy0fo5grcd.png" alt="1mg Calcium + Vitamin D3 Joint Health & Immunity Zinc, Magnesium and Alfalfa Tablet" class="w-14">
+                                    </div>
+                                    <div class="text-right">
+                                        <h5 class="font-semibold">₹785.4</h5>
+                                        <p class="text-xs text-green-500">56% off <span class="text-gray-500">MRP <span class="line-through">₹1785</span></span></p>
+                                        <button class="bg-red-400 px-5 py-2 shadow-sm font-medium tracking-wider border text-red-100 rounded-lg hover:shadow-lg hover:bg-red-600">Buy Pack</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="border shadow-md rounded-lg">
+                            <p class="py-3 px-5 bg-green-100 text-xs"><i class="fas fa-chart-line text-green-500"></i> 2,301 people bought this recently</p>
+                            <div class="flex flex-col p-5">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="price" class="form-radio h-5 w-5 text-red-600 focus:shadow-none"checked>
+                                    <span class="ml-2 text-lg font-medium">₹298 <span class="line-through text-gray-500 text-sm">₹595 </span>
+                                    <span class="ml-2 text-gray-500 text-base text-green-500 bg-green-100 px-1.5">50% off</span></span>
+                                </label>
+                                <label class="inline-flex items-center mt-3">
+                                    <input type="radio" name="price" class="form-radio h-5 w-5 text-red-600 focus:shadow-none">
+                                    <span class="ml-2 text-lg font-medium">₹298 <span class="text-sm text-gray-500">+ Free shipping and 5% cashback with </span>
+                                    <span class="ml-2 text-sm text-white bg-yellow-900 px-1.5">Care plan</span></span>
+                                </label>
+                            </div>
+                            <p class="px-5 text-xs text-gray-600">Inclusive of all taxes</p>
+                            <p class="px-5 py-2 font-bold"><i class="far fa-clock"></i> Sale Ends in <span class="text-green-600 italic">2 days 11:15:34</span></p>
+                            <div class="px-5 pb-5">
+                                <a href="#" class="block bg-red-400 px-5 py-3 uppercase text-center text-sm shadow-sm font-medium tracking-wider border text-red-100 rounded-lg hover:shadow-lg hover:bg-red-600">Add to cart</a>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-dashed border-gray-400 shadow-md rounded-lg mt-10 relative">
+                            <p class="absolute px-1.5 py-0.5 text-white top-2 -left-2 bg-green-500 text-xs">Additional offers</p>
+                            <div class="flex flex-col p-5 mt-5">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-tag text-green-500"></i>
+                                    <p class="text-xs pl-3"><span class="font-bold">Mobikwik:</span> Pay with Mobikwik and get 20% cashback (up to ₹250) with a minimum cart value of ₹1200. Valid till 22nd June 2021</p>
+                                </div>
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-tag text-green-500"></i>
+                                    <p class="text-xs pl-3"><span class="font-bold">Special Offer:</span> Pay online (Wallet, Debit/Credit Card & Net Banking) and get extra 5% 1mgCash (up to ₹25)</p>
+                                </div>
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-tag text-green-500"></i>
+                                    <p class="text-xs pl-3"><span class="font-bold">Amazon Pay:</span> Pay with AmazonPay and get cashback up to ₹600 with minimum cashback of ₹10. Minimum order value is ₹100. Valid till 30th June 2021</p>
+                                </div>
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-tag text-green-500"></i>
+                                    <p class="text-xs pl-3"><span class="font-bold">Paytm:</span> Pay with Paytm and get cashback up to ₹500. Assured cashback of ₹20. Minimum order value ₹750. Valid only on your first Paytm transaction on 1mg. Valid till 5th July 2021</p>
+                                </div>
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-tag text-green-500"></i>
+                                    <p class="text-xs pl-3"><span class="font-bold">OlaMoney Postpaid+ Users Offer:</span> Get up to ₹300 cashback (min cashback ₹50) on orders above ₹999. This offer is applicable on first-ever transaction on 1mg with OlaMoney Postpaid+ users until 31st July 2021</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-3 md:mx-10">
+            <div class="col-span-2 bg-white my-10 p-3 md:p-10">
+                <h3 class="text-lg">Information about 1mg Calcium + Vitamin D3 Joint Health & Immunity Zinc, Magnesium and Alfalfa Tablet</h3>
+                <p class="text-sm mt-3"><span class="font-bold">1mg Calcium + Vitamin D3 Joint Health & Immunity Zinc, Magnesium and Alfalfa Tablet</span> are beneficial for people who do not get enough calcium from their regular diet. While Calcium is necessary for normal functioning of nerves, cells, muscle, and bones. Vitamin D helps in the absorption of Calcium in your body. Having the right amount of Calcium and Vitamin D is important for strong bones. The Calcium and Vitamin D3 combination is also beneficial for women who are pregnant, nursing, or in their post-menopausal stage.</p>
+                <div>
+                    <p class="font-medium mt-3">Key Ingredients:</p>
+                    <ul class="list-disc list-inside">
+                        <li class="text-sm my-2">Calcium Citrate Malate</li>
+                        <li class="text-sm my-2">Vitamin D3</li>
+                        <li class="text-sm my-2">Zinc</li>
+                        <li class="text-sm my-2">Magnesium</li>
+                        <li class="text-sm my-2">Alfalfa</li>
+                        <li class="text-sm my-2">Vitamin K2-7</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <p class="font-medium mt-3">Key Benefits:</p>
+                    <ul class="list-disc list-inside">
+                        <li class="text-sm my-2">Calcium and Vitamin-D3 are beneficial for people who do not get enough calcium from their regular diet</li>
+                        <li class="text-sm my-2">While Calcium is necessary for normal functioning of nerves, cells, muscle, and bones, Vitamin-D helps in the absorption of calcium in your body</li>
+                        <li class="text-sm my-2">Having the right amounts of Vitamin-D and Calcium is important for strong bones</li>
+                        <li class="text-sm my-2">Calcium citrate and Vitamin D3 (Cholecalciferol) improves the bio-availability of calcium</li>
+                        <li class="text-sm my-2">Reduces the risk of calcium deficiency, Rickets, and Osteoporosis</li>
+                        <li class="text-sm my-2">Promotes mobility and flexibility of joints</li>
+                        <li class="text-sm my-2">Helps in reducing the rate of bone loss</li>
+                        <li class="text-sm my-2">Decreases risk of fractures in elderly people</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <p class="font-medium mt-3">Directions For Use:</p>
+                    <p class="text-sm my-2">Calcium and Vitamin-D3 are beneficial for people who do not get enough calcium from their regular diet</p>
+                </div>
+                
+                <div>
+                    <p class="font-medium mt-3">Key Benefits:</p>
+                    <ul class="list-disc list-inside">
+                        <li class="text-sm my-2">Calcium and Vitamin-D3 are beneficial for people who do not get enough calcium from their regular diet</li>
+                        <li class="text-sm my-2">While Calcium is necessary for normal functioning of nerves, cells, muscle, and bones, Vitamin-D helps in the absorption of calcium in your body</li>
+                        <li class="text-sm my-2">Having the right amounts of Vitamin-D and Calcium is important for strong bones</li>
+                        <li class="text-sm my-2">Calcium citrate and Vitamin D3 (Cholecalciferol) improves the bio-availability of calcium</li>
+                        <li class="text-sm my-2">Reduces the risk of calcium deficiency, Rickets, and Osteoporosis</li>
+                        <li class="text-sm my-2">Promotes mobility and flexibility of joints</li>
+                        <li class="text-sm my-2">Helps in reducing the rate of bone loss</li>
+                        <li class="text-sm my-2">Decreases risk of fractures in elderly people</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <p class="text-sm my-2"><span class="font-medium mr-2">Note:</span>1MG Healthcare Solutions Private Limited is only the registered manufacturer/marketer of the product and not the seller of the product.</p>
+                </div>
+            </div>
+            
+            <div class="">
+                <div class="bg-white my-10 p-3 md:p-10 border shadow-md">
+                    <h3 class="text-lg">Frequently bought together</h3>
+                    <div class="flex items-center my-3">
+                        <img src="./img/k7regmdcvyoy0fo5grcd.png" alt="1mg Calcium + Vitamin D3 Joint Health & Immunity Zinc, Magnesium and Alfalfa Tablet" class="w-20">
+                        <div class="ml-3">
+                            <p class="text-sm">1mg Calcium + Vitamin D3 Joint Health & Immunity Zinc</p>
+                            <p class="text-xs mt-1"><span class="text-gray-500">MRP <span class="line-through">₹595</span><span class="text-green-500"> 50% off </span></p>
+                            <p class="font-semibold">₹298</p>
+                        </div>
+                    </div>
+                    
+                    <p class="w-full text-center"><i class="fas fa-plus"></i></p>
+                    
+                    <div class="flex items-center my-3">
+                        <img src="./img/u9xukotqkxoo6umolqg3.jpg" alt="Zivast 10 Tablet" class="w-20">
+                        <div class="ml-3">
+                            <p class="text-sm">Zivast 10 Tablet</p>
+                            <p class="text-xs mt-1"><span class="text-gray-500">MRP <span class="line-through">₹595</span><span class="text-green-500"> 50% off </span></p>
+                            <p class="font-semibold">₹4.65</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center my-3">
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase">Total Price</p>
+                            <p class="font-medium">₹338.65</p>
+                        </div>
+                        <a href="#" class="bg-red-400 px-5 py-3 text-sm uppercase shadow-sm font-medium tracking-wider border text-red-100 rounded-lg hover:shadow-lg hover:bg-red-600">Add both to cart</a>
+                    </div>
+                </div>
+                
+                <div class="bg-white mt-10 py-10">
+                    <div class="flex flex-col items-center">
+                        <img src="./img/labs.png" alt="consult doctor" class="w-20"/>
+                        <a href="#" class="px-5 py-3 text-sm uppercase shadow-sm font-medium tracking-wider border border-red-500 text-red-500 rounded-lg hover:shadow-lg hover:bg-red-600 hover:text-white transition delay-100 duration-300 ease-in-out">Book a lab test online</a>
+                    </div>
+                </div>
+                
+                <div class="bg-white mt-10 py-10">
+                    <div class="flex flex-col items-center">
+                        <img src="./img/Doctor_xqon4h.png" alt="consult doctor" class="w-20"/>
+                        <a href="#" class="px-5 py-3 text-sm uppercase shadow-sm font-medium tracking-wider border border-red-500 text-red-500 rounded-lg hover:shadow-lg hover:bg-red-600 hover:text-white transition delay-100 duration-300 ease-in-out">Consult a doctor online</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-2 sm:mx-10">
+            <div class="col-span-2 bg-white p-3 md:p-10">
+                <div class="w-full md:w-1/2 p-5">
+                    <h1 class="text-2xl font-semibold text-gray-500">Ratings & Reviews</h1>
+                    <div class="flex items-center">
+                        <p class="text-green-500 text-5xl font-bold ">4.9 </p>
+                        <i class="far fa-star text-green-500 text-4xl font-extrabold mt-1 ml-2"></i>
+                    </div>
+                    <h1 class="text-sm font-semibold text-gray-500 mt-3">426 Ratings & 245 Reviews</h1>
+                    
+                    <div class="flex">
+                        <div class="flex">
+                            <p>5</p>
+                            <i class="far fa-star text-sm text-gray-500 ml-2 mt-0.5"></i>
+                        </div>
+                        
+                        <div class="flex flex-col w-full px-3 mt-2">
+                            <div class='bg-gray-300 rounded w-full mb-4' style="height: 10px">
+                                <div class='bg-green-500 rounded h-full' style="width: 57%"></div>
+                            </div>
+                        </div>
+                        <p class="w-5">57% </p>
+                    </div>
+                    <div class="flex">
+                        <div class="flex">
+                            <p>4</p>
+                            <i class="far fa-star text-sm text-gray-500 ml-2 mt-0.5"></i>
+                        </div>
+                        
+                        <div class="flex flex-col w-full px-3 mt-2">
+                            <div class='bg-gray-300 rounded w-full mb-4' style="height: 10px">
+                                <div class='bg-green-500 rounded h-full' style="width: 24%"></div>
+                            </div>
+                        </div>
+                        <p class="w-5">24%</p>
+                    </div>
+                    <div class="flex">
+                        <div class="flex">
+                            <p>3</p>
+                            <i class="far fa-star text-sm text-gray-500 ml-2 mt-0.5"></i>
+                        </div>
+                        
+                        <div class="flex flex-col w-full px-3 mt-2">
+                            <div class='bg-gray-300 rounded w-full mb-4' style="height: 10px">
+                                <div class='bg-green-500 rounded h-full' style="width: 10%"></div>
+                            </div>
+                        </div>
+                        <p class="w-5">10%</p>
+                    </div>
+                    <div class="flex">
+                        <div class="flex">
+                            <p>2</p>
+                            <i class="far fa-star text-sm text-gray-500 ml-2 mt-0.5"></i>
+                        </div>
+                        
+                        <div class="flex flex-col w-full px-3 mt-2">
+                            <div class='bg-gray-300 rounded w-full mb-4' style="height: 10px">
+                                <div class='bg-yellow-500 rounded h-full' style="width: 2%"></div>
+                            </div>
+                        </div>
+                        <p class="w-5">2%</p>
+                    </div>
+                    <div class="flex">
+                        <div class="flex">
+                            <p>1</p>
+                            <i class="far fa-star text-sm text-gray-500 ml-2 mt-0.5"></i>
+                        </div>
+                        
+                        <div class="flex flex-col w-full px-3 mt-2">
+                            <div class='bg-gray-300 rounded w-full mb-4' style="height: 10px">
+                                <div class='bg-red-400 rounded h-full' style="width: 7%"></div>
+                            </div>
+                        </div>
+                        <p class="w-5">7%</p>
+                    </div>
+                </div>
+                <div class="border-t border-gray-200 py-3">
+                    <h3 class="text-sm font-medium text-gray-500 tracking-tight">Sumit Kumar</h3>
+                    <div class="flex justify-between items-center mt-2">
+                        <div class="flex items-center">
+                            <div class="flex items-center bg-green-500 rounded px-1">
+                                <p class="text-white">5 </p>
+                                <i class="far fa-star text-white text-xs mt-0.5 pl-1"></i>
+                            </div>
+                            <p class="text-gray-500 text-xs font-bold ml-2">Verified Buyer</p>
+                        </div>
+                        <p class="text-gray-500 text-xs font-medium">6 June 2021</p>
+                    </div>
+                    <p  class="text-gray-500 text-xs py-3">Very help full for me</p>
+                </div>
+                
+                <div class="border-t border-gray-200 py-3">
+                    <h3 class="text-sm font-medium text-gray-500 tracking-tight">Tanvi Joshi</h3>
+                    <div class="flex justify-between items-center mt-2">
+                        <div class="flex items-center">
+                            <div class="flex items-center bg-green-500 rounded px-1">
+                                <p class="text-white">5 </p>
+                                <i class="far fa-star text-white text-xs mt-0.5 pl-1"></i>
+                            </div>
+                            <p class="text-gray-500 text-xs font-bold ml-2">Verified Buyer</p>
+                        </div>
+                        <p class="text-gray-500 text-xs font-medium">22 December 2019</p>
+                    </div>
+                    <p  class="text-gray-500 text-xs py-3">I like and I found it is really good for bones and teeth</p>
+                </div>
+                
+                <div class="border-t border-gray-200 py-3">
+                    <h3 class="text-sm font-medium text-gray-500 tracking-tight">Vaibhav Rupraoji Rathod</h3>
+                    <div class="flex justify-between items-center mt-2">
+                        <div class="flex items-center">
+                            <div class="flex items-center bg-green-500 rounded px-1">
+                                <p class="text-white">5 </p>
+                                <i class="far fa-star text-white text-xs mt-0.5 pl-1"></i>
+                            </div>
+                            <p class="text-gray-500 text-xs font-bold ml-2">Verified Buyer</p>
+                        </div>
+                        <p class="text-gray-500 text-xs font-medium">15 February 2020</p>
+                    </div>
+                    <p  class="text-gray-500 text-xs py-3">Very good choice for children</p>
+                </div>
+                <div class="border-t border-gray-200 py-3">
+                    <h3 class="text-sm font-medium text-gray-500 tracking-tight">Ashok Mardia</h3>
+                    <div class="flex justify-between items-center mt-2">
+                        <div class="flex items-center">
+                            <div class="flex items-center bg-green-500 rounded px-1">
+                                <p class="text-white">5 </p>
+                                <i class="far fa-star text-white text-xs mt-0.5 pl-1"></i>
+                            </div>
+                            <p class="text-gray-500 text-xs font-bold ml-2">Verified Buyer</p>
+                        </div>
+                        <p class="text-gray-500 text-xs font-medium">22 January 2020</p>
+                    </div>
+                    <p  class="text-gray-500 text-xs py-3">Very good for helth.</p>
+                </div>
+                <div class="border-t border-gray-200 py-3">
+                    <h3 class="text-sm font-medium text-gray-500 tracking-tight">Umesh Kumar Gupta</h3>
+                    <div class="flex justify-between items-center mt-2">
+                        <div class="flex items-center">
+                            <div class="flex items-center bg-green-500 rounded px-1">
+                                <p class="text-white">5 </p>
+                                <i class="far fa-star text-white text-xs mt-0.5 pl-1"></i>
+                            </div>
+                            <p class="text-gray-500 text-xs font-bold ml-2">Verified Buyer</p>
+                        </div>
+                        <p class="text-gray-500 text-xs font-medium">18 March 2020</p>
+                    </div>
+                    <p  class="text-gray-500 text-xs py-3">A bit bigger in size tablets but its perfectly glazed surface makes it manageable to swallow</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="mx-2 sm:mx-10 my-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+                <div class="mb-3">
+                    <p class="font-medium mb-3">Know Us</p>
+                    <ul>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">About Us</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Contact Us</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Press Coverage</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Business Partnership</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Careers</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Sehat Ke Sathi</a></li>
+                    </ul>
+                </div>
+                <div class="mb-3">
+                    <p class="font-medium mb-3">Our Policies</p>
+                    <ul>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Privacy Policy</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Terms and Conditions </a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Editorial Policy</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Return Policy</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">IP Policy</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Grievance Redressal Policy</a></li>
+                    </ul>
+                </div>
+                <div class="mb-3">
+                    <p class="font-medium mb-3">Our Services</p>
+                    <ul>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Order Medicines</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Book Lab Tests</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Consult a Doctor</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Ayurveda Articles</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Hindi Articles</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">1mg Care Plan</a></li>
+                    </ul>
+                </div>
+                <div class="mb-3">
+                    <p class="font-medium mb-3">Connect</p>
+                    <p href="#" class="text-xs text-gray-600">Social Links</p>
+                    <ul class="flex">
+                        <li><a href="#" class="text-3xl hover:text-red-600 transition duration-300 ease-in-out mr-2"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#" class="text-3xl hover:text-red-600 transition duration-300 ease-in-out mr-2"><i class="fab fa-twitter-square"></i></a></li>
+                        <li><a href="#" class="text-3xl hover:text-red-600 transition duration-300 ease-in-out mr-2"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#" class="text-3xl hover:text-red-600 transition duration-300 ease-in-out mr-2"><i class="fab fa-instagram-square"></i></a></li>
+                        <li><a href="#" class="text-3xl hover:text-red-600 transition duration-300 ease-in-out mr-2"><i class="fab fa-youtube-square"></i></a></li>
+                    </ul>
+                    <p class="text-xs text-gray-600 mb-5">Want daily dose of health?</p>
+                    <p><a href="#" class="uppercase bg-red-400 text-white rounded font-bold px-3 py-2">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t-2 pb-5 bg-white">
+            <p class="text-xs text-gray-400 text-center font-semibold mt-5">© 2021 1mg. All rights reserved. In compliance with Drugs and Cosmetics Act, 1940 and Drugs and Cosmetics Rules, 1945, we don't process requests for Schedule X and other habit forming drugs.</p>
+        </div>
+    </footer>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/jquery-v2.1.js"></script>
+    <script src="./js/xzoom.min.js"></script>
+    <script src="./js/xzoom-setup.js"></script>
+</body>
+</html>

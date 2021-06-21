@@ -1,0 +1,9 @@
+.get-off-slick-items .slick-slide,
+.ayurveda-slick-items .slick-slide {
+  margin: 0 15px;
+}
+
+[type="checkbox"]:focus,
+[type="radio"]:focus {
+  --tw-ring-shadow: none;
+}

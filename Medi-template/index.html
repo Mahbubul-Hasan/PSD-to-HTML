@@ -1,0 +1,699 @@
+<!doctype html>
+<html>
+<head>
+    <title>Online Pharmacy India | Buy Medicines from India's Trusted Medicine Store: 1mg.com</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body class="bg-gray-100">
+    
+    <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 border-b">
+        <div x-data="{ open: false }" class="flex flex-col mx-auto md:items-center md:justify-between md:flex-row md:px-6">
+            <div class="px-2 sm:px-4 flex flex-row items-center justify-between">
+                <a href="#"><img src="./img/da93313e-8d98-11eb-b7ca-02186d684e20.png" alt="1mg" class="w-24"></a>
+                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{'flex': open, 'hidden': !open}" class="flex md:flex flex-col md:flex-row flex-grow pb-4 md:pb-0 hidden justify-between md:ml-12 px-2">
+                <ul class="w-full md:w-3/5 flex flex-col md:flex-row">
+                    <li><a class="tracking-tighter uppercase px-4 py-2 mt-2 text-base font-bold hover:text-red-400 transition duration-300 ease-in-out" href="#">Medicines</a></li>
+                    <li><a class="tracking-tighter uppercase px-4 py-2 mt-2 text-base font-bold hover:text-red-400 transition duration-300 ease-in-out" href="#">Lab Tests</a></li>
+                    <li><a class="tracking-tighter uppercase px-4 py-2 mt-2 text-base font-bold hover:text-red-400 transition duration-300 ease-in-out" href="#">Ask Doctor</a></li>
+                    <li><a class="tracking-tighter uppercase px-4 py-2 mt-2 text-base font-bold hover:text-red-400 transition duration-300 ease-in-out" href="#">COVID-19</a></li>
+                    <li><a class="tracking-tighter uppercase px-4 py-2 mt-2 text-base font-bold hover:text-red-400 transition duration-300 ease-in-out" href="#">Ayurveda</a></li>
+                </ul>
+                <ul class="w-full md:w-2/5 pt-3 md:pt-0 flex flex-col md:flex-row md:justify-end">
+                    <li>
+                        <a class="pl-4 py-2 mt-2 text-xs font-semibold hover:text-red-400" href="#">Login | </a>
+                        <a class="py-2 mt-2 text-xs font-semibold hover:text-red-400" href="#">Sign Up</a>
+                    </li>
+                    <li><a class="px-4 py-2 mt-2 text-xs font-semibold hover:text-red-400" href="#">Offers</a></li>
+                    <li><a class="px-4 py-2 mt-2 text-lg font-semibold hover:text-red-400" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a class="px-4 py-2 mt-2 text-xs font-semibold hover:text-red-400" href="#">Need help?</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="bg-white">
+        <div class="flex flex-wrap mx-2 sm:mx-10">
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        All Medicines<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        COVID Test & Prevention<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        Featured<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        Fitness & Supplements<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        Diabetes<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        Healthcare Devices<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        Personal Care<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        Health Conditions<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        Ayurveda Products<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-cender">
+                <div x-data="{ dropdownOpen: false }" class="relative">
+                    <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block p-2 focus:outline-none text-xs hover:text-red-600 transition duration-300 ease-in-out">
+                        Homeopathy<i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+                    
+                    <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+                    
+                    <div x-show="dropdownOpen" class="absolute left-0py-2 w-64 shadow-xl z-20">
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                        <a href="#" class="block px-4 py-2 text-xs capitalize text-gray-700 bg-white hover:text-white hover:text-red-600 transition duration-300 ease-in-out">Medicines by Therapeutic Class</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="flex flex-col md:flex-row">
+        <div class="w-full md:w-2/3 slider-slick-items">
+            <img src="./img/tvnlusdlxte3quv1gkt5.png" alt="FLAT20">
+            <img src="./img/ry3xkgxsoih6iv5s35vg.png" alt="FLAT20">
+            <img src="./img/hxozc6ldt43zxflvhczq.png" alt="FLAT20">
+            <img src="./img/vrszrwawmkpzq4mhejuw.png" alt="FLAT20">
+            <img src="./img/p7tco1xsroakmmtjv8cl.png" alt="FLAT20">
+        </div>
+        <div class="w-full md:w-1/3">
+            <img src="./img/w4skq3ftdsns6wf55lkt.png" alt="FLAT20">
+        </div>
+    </section>
+    
+    <section>
+        <div class="bg-white border-t-2 border-b-2 border-gray-200">
+            <h2 class="text-xl text-gray-500 text-center py-5">1mg: India’s Leading Online Pharmacy & Healthcare Platform</h2>
+        </div>
+        <div class="mx-2 sm:mx-10 my-10">
+            <img src="./img/baijzgmlqqp0eaifrdv0.png" alt="FLAT20">
+        </div>
+    </section>
+    
+    <main>
+        <!-- Featured Brands -->
+        <section>
+            <div class="flex justify-between mx-2 sm:mx-10 my-3">
+                <h4 class="font-medium">Featured Brands</h4>
+                <a href="#" class="font-medium uppercase bg-red-400 rounded text-white text-xs px-2 py-1">See all</a>
+            </div>
+            
+            <div class="px-10 bg-white featured-brands-slick-items">
+                <a href="#" class="border border-transparent hover:border-gray-300 transition duration-500 ease-in-out rounded-lg py-8">
+                    <img src="./img/babipanoec0fy75pb9xx.png" alt="Baidyanath" class="w-32 mx-auto">
+                    <p class="text-center text-sm">Baidyanath</p>
+                </a>
+                <a href="#" class="border border-transparent hover:border-gray-300 transition duration-500 ease-in-out rounded-lg py-8">
+                    <img src="./img/eiiwqvftilqdagrmwra2.png" alt="Nivea" class="w-32 mx-auto">
+                    <p class="text-center text-sm">Nivea</p>
+                </a>
+                
+                <a href="#" class="border border-transparent hover:border-gray-300 transition duration-500 ease-in-out rounded-lg py-8">
+                    <img src="./img/nonfb06ssuuwhnzbv0q2.png" alt="Horlicks" class="w-32 mx-auto">
+                    <p class="text-center text-sm">Horlicks</p>
+                </a>
+                
+                <a href="#" class="border border-transparent hover:border-gray-300 transition duration-500 ease-in-out rounded-lg py-8">
+                    <img src="./img/qba4fevncqnjinqdk9s3.png" alt="Bournvita" class="w-32 mx-auto">
+                    <p class="text-center text-sm">Bournvita</p>
+                </a>
+                
+                <a href="#" class="border border-transparent hover:border-gray-300 transition duration-500 ease-in-out rounded-lg py-8">
+                    <img src="./img/xk3uwhw2e6ljdj4r5s5d.png" alt="Smart Greens" class="w-32 mx-auto">
+                    <p class="text-center text-sm">Smart Greens</p>
+                </a>
+                
+                <a href="#" class="border border-transparent hover:border-gray-300 transition duration-500 ease-in-out rounded-lg py-8">
+                    <img src="./img/ooju2j708vbkgfacazr8.png" alt="Mamaearth" class="w-32 mx-auto">
+                    <p class="text-center text-sm">Mamaearth</p>
+                </a>
+                
+                <a href="#" class="border border-transparent hover:border-gray-300 transition duration-500 ease-in-out rounded-lg py-8">
+                    <img src="./img/jdgccxmfnalotysxdvut.png" alt="Baidyanath" class="w-32 mx-auto">
+                    <p class="text-center text-sm">Baidyanath</p>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Get up to 50% off -->
+        <section class="mt-7">
+            <div class="sm:flex justify-start sm:justify-between mx-2 sm:mx-10 my-3">
+                <h4 class="font-medium">Full Body Health Checkups | Get up to 50% off</h4>
+                <a href="#" class="font-medium uppercase bg-red-400 rounded text-white text-xs px-2 py-1">See all</a>
+            </div>
+            
+            <div class="bg-white px-5 py-5 get-off-slick-items">
+                <a href="#" class="border border-gray-300 hover:border-gray-400 transition duration-500 ease-in-out rounded-lg px-5 py-4 relative">
+                    <div>
+                        <h5 class="tracking-tighter font-semibold">Covid Home Care Basic</h5>
+                        <p class="text-xs text-gray-600">Includes 35 tests</p>
+                    </div>
+                    <div class="flex items-center my-3">
+                        <div class="w-20 h-10 border border-gray-300">
+                            <img src="./img/da93313e-8d98-11eb-b7ca-02186d684e20.png" alt="Baidyanath" class="-mt-3">
+                        </div>
+                        <p class="text-xs text-white bg-green-500 rounded px-1.5 py-0.5 mx-2">4.9 <i class="far fa-star"></i></p>
+                        <p class="text-xs uppercase">Iso</p>
+                    </div>
+                    <div class="flex items-center my-3">
+                        <p class="text-base">₹3825</p>
+                        <p class="text-xs font-medium line-through text-gray-500 mx-2">₹3525</p>
+                        <p class="font-medium text-xs text-green-400 border border-dashed border-green-400 bg-green-100 px-1.5 py-0.5 ml-3 inline-block">15% Coupon</p>
+                    </div>
+                    <p class="absolute top-4 right-0 bg-yellow-200 rounded uppercase font-medium text-sm px-1.5 py-0.5"><i class="fas fa-user-shield"></i> Safe</p>
+                </a>
+                <a href="#" class="border border-gray-300 hover:border-gray-400 transition duration-500 ease-in-out rounded-lg px-5 py-4 relative">
+                    <div>
+                        <h5 class="tracking-tighter font-semibold">Covid Home Care Basic</h5>
+                        <p class="text-xs text-gray-600">Includes 35 tests</p>
+                    </div>
+                    <div class="flex items-center my-3">
+                        <div class="w-20 h-10 border border-gray-300">
+                            <img src="./img/da93313e-8d98-11eb-b7ca-02186d684e20.png" alt="Baidyanath" class="-mt-3">
+                        </div>
+                        <p class="text-xs text-white bg-green-500 rounded px-1.5 py-0.5 mx-2">4.9 <i class="far fa-star"></i></p>
+                        <p class="text-xs uppercase">Iso</p>
+                    </div>
+                    <div class="flex items-center my-3">
+                        <p class="text-base">₹3825</p>
+                        <p class="text-xs font-medium line-through text-gray-500 mx-2">₹3525</p>
+                        <p class="font-medium text-xs text-green-400 border border-dashed border-green-400 bg-green-100 px-1.5 py-0.5 ml-3 inline-block">15% Coupon</p>
+                    </div>
+                    <p class="absolute top-4 right-0 bg-yellow-200 rounded uppercase font-medium text-sm px-1.5 py-0.5"><i class="fas fa-user-shield"></i> Safe</p>
+                </a>
+                <a href="#" class="border border-gray-300 hover:border-gray-400 transition duration-500 ease-in-out rounded-lg px-5 py-4 relative">
+                    <div>
+                        <h5 class="tracking-tighter font-semibold">Covid Home Care Basic</h5>
+                        <p class="text-xs text-gray-600">Includes 35 tests</p>
+                    </div>
+                    <div class="flex items-center my-3">
+                        <div class="w-20 h-10 border border-gray-300">
+                            <img src="./img/da93313e-8d98-11eb-b7ca-02186d684e20.png" alt="Baidyanath" class="-mt-3">
+                        </div>
+                        <p class="text-xs text-white bg-green-500 rounded px-1.5 py-0.5 mx-2">4.9 <i class="far fa-star"></i></p>
+                        <p class="text-xs uppercase">Iso</p>
+                    </div>
+                    <div class="flex items-center my-3">
+                        <p class="text-base">₹3825</p>
+                        <p class="text-xs font-medium line-through text-gray-500 mx-2">₹3525</p>
+                        <p class="font-medium text-xs text-green-400 border border-dashed border-green-400 bg-green-100 px-1.5 py-0.5 ml-3 inline-block">15% Coupon</p>
+                    </div>
+                    <p class="absolute top-4 right-0 bg-yellow-200 rounded uppercase font-medium text-sm px-1.5 py-0.5"><i class="fas fa-user-shield"></i> Safe</p>
+                </a>
+                <a href="#" class="border border-gray-300 hover:border-gray-400 transition duration-500 ease-in-out rounded-lg px-5 py-4 relative">
+                    <div>
+                        <h5 class="tracking-tighter font-semibold">Covid Home Care Basic</h5>
+                        <p class="text-xs text-gray-600">Includes 35 tests</p>
+                    </div>
+                    <div class="flex items-center my-3">
+                        <div class="w-20 h-10 border border-gray-300">
+                            <img src="./img/da93313e-8d98-11eb-b7ca-02186d684e20.png" alt="Baidyanath" class="-mt-3">
+                        </div>
+                        <p class="text-xs text-white bg-green-500 rounded px-1.5 py-0.5 mx-2">4.9 <i class="far fa-star"></i></p>
+                        <p class="text-xs uppercase">Iso</p>
+                    </div>
+                    <div class="flex items-center my-3">
+                        <p class="text-base">₹3825</p>
+                        <p class="text-xs font-medium line-through text-gray-500 mx-2">₹3525</p>
+                        <p class="font-medium text-xs text-green-400 border border-dashed border-green-400 bg-green-100 px-1.5 py-0.5 ml-3 inline-block">15% Coupon</p>
+                    </div>
+                    <p class="absolute top-4 right-0 bg-yellow-200 rounded uppercase font-medium text-sm px-1.5 py-0.5"><i class="fas fa-user-shield"></i> Safe</p>
+                </a>
+                <a href="#" class="border border-gray-300 hover:border-gray-400 transition duration-500 ease-in-out rounded-lg px-5 py-4 relative">
+                    <div>
+                        <h5 class="tracking-tighter font-semibold">Covid Home Care Basic</h5>
+                        <p class="text-xs text-gray-600">Includes 35 tests</p>
+                    </div>
+                    <div class="flex items-center my-3">
+                        <div class="w-20 h-10 border border-gray-300">
+                            <img src="./img/da93313e-8d98-11eb-b7ca-02186d684e20.png" alt="Baidyanath" class="-mt-3">
+                        </div>
+                        <p class="text-xs text-white bg-green-500 rounded px-1.5 py-0.5 mx-2">4.9 <i class="far fa-star"></i></p>
+                        <p class="text-xs uppercase">Iso</p>
+                    </div>
+                    <div class="flex items-center my-3">
+                        <p class="text-base">₹3825</p>
+                        <p class="text-xs font-medium line-through text-gray-500 mx-2">₹3525</p>
+                        <p class="font-medium text-xs text-green-400 border border-dashed border-green-400 bg-green-100 px-1.5 py-0.5 ml-3 inline-block">15% Coupon</p>
+                    </div>
+                    <p class="absolute top-4 right-0 bg-yellow-200 rounded uppercase font-medium text-sm px-1.5 py-0.5"><i class="fas fa-user-shield"></i> Safe</p>
+                </a>
+                <a href="#" class="border border-gray-300 hover:border-gray-400 transition duration-500 ease-in-out rounded-lg px-5 py-4 relative">
+                    <div>
+                        <h5 class="tracking-tighter font-semibold">Covid Home Care Basic</h5>
+                        <p class="text-xs text-gray-600">Includes 35 tests</p>
+                    </div>
+                    <div class="flex items-center my-3">
+                        <div class="w-20 h-10 border border-gray-300">
+                            <img src="./img/da93313e-8d98-11eb-b7ca-02186d684e20.png" alt="Baidyanath" class="-mt-3">
+                        </div>
+                        <p class="text-xs text-white bg-green-500 rounded px-1.5 py-0.5 mx-2">4.9 <i class="far fa-star"></i></p>
+                        <p class="text-xs uppercase">Iso</p>
+                    </div>
+                    <div class="flex items-center my-3">
+                        <p class="text-base">₹3825</p>
+                        <p class="text-xs font-medium line-through text-gray-500 mx-2">₹3525</p>
+                        <p class="font-medium text-xs text-green-400 border border-dashed border-green-400 bg-green-100 px-1.5 py-0.5 ml-3 inline-block">15% Coupon</p>
+                    </div>
+                    <p class="absolute top-4 right-0 bg-yellow-200 rounded uppercase font-medium text-sm px-1.5 py-0.5"><i class="fas fa-user-shield"></i> Safe</p>
+                </a>
+            </div>
+        </section>
+        
+        <!-- 1mg Health Products -->
+        <section class="mt-7">
+            <div class="sm:flex justify-start sm:justify-between mx-2 sm:mx-10 my-3">
+                <h4 class="font-medium">1mg Health Products</h4>
+                <a href="#" class="font-medium uppercase bg-red-400 rounded text-white text-xs px-2 py-1">See all</a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-4 bg-white sm:px-10 px-5 health-products-slick-items">
+                <a href="#" class="border border-transparent hover:border-gray-300 transition duration-500 ease-in-out rounded-lg px-3 py-4">
+                    <img src="./img/1mg-multivitamin-supreme-immunity-booster-zinc-calcium-and-vitamin-d-capsule.png" alt="1mg Multivitamin Supreme Immunity Booster Zinc, Calcium and Vitamin D Capsule" class="mx-auto my-0">
+                    <div class="mt-5">
+                        <p class="tracking-tighter font-medium text-sm">1mg Multivitamin Supreme Immunity Booster Zinc, Calcium and Vitamin D Capsule</p>
+                        <p class="text-xs text-gray-600 mt-2">Includes 35 tests</p>
+                    </div>
+                    <div class="flex items-center my-1">
+                        <p class="text-xs text-white bg-green-500 rounded px-1.5 py-0.5">4.9 <i class="far fa-star"></i></p>
+                        <p class="text-xs text-gray-600 uppercase ml-2">586 ratings</p>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-xs text-gray-500">MRP <span class="line-through">₹995</span></p>
+                        <p class="font-medium text-xs text-green-400 ml-2">45% off</p>
+                    </div>
+                    <p class="text-md font-medium">₹547</p>
+                </a>
+                <a href="#" class="border border-transparent hover:border-gray-300 transition duration-500 ease-in-out rounded-lg px-3 py-4">
+                    <img src="./img/1mg-calcium-vitamin-d3-joint-health-immunity-zinc-magnesium-and-alfalfa-tablet.png" alt="1mg Calcium + Vitamin D3 Joint Health & Immunity Zinc, Magnesium and Alfalfa Tablet" class="mx-auto my-0">
+                    <div class="mt-5">
+                        <p class="tracking-tighter font-medium text-sm">1mg Calcium + Vitamin D3 Joint Health & Immunity Zinc, Magnesium and Alfalfa Tablet</p>
+                        <p class="text-xs text-gray-600 mt-2">Includes 35 tests</p>
+                    </div>
+                    <div class="flex items-center my-1">
+                        <p class="text-xs text-white bg-green-500 rounded px-1.5 py-0.5">4.9 <i class="far fa-star"></i></p>
+                        <p class="text-xs text-gray-600 uppercase ml-2">586 ratings</p>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-xs text-gray-500">MRP <span class="line-through">₹995</span></p>
+                        <p class="font-medium text-xs text-green-400 ml-2">45% off</p>
+                    </div>
+                    <p class="text-md font-medium">₹547</p>
+                </a>
+                <a href="#" class="border border-transparent hover:border-gray-300 transition duration-500 ease-in-out rounded-lg px-3 py-4">
+                    <img src="./img/1mg-women-s-multivitamin-immunity-booster-zinc-vitamin-c-calcium-vitamin-d-and-iron-tablet.png" alt="1mg Women's Multivitamin Immunity Booster Zinc, Vitamin C, Calcium, Vitamin D and Iron Tablet" class="mx-auto my-0">
+                    <div class="mt-5">
+                        <p class="tracking-tighter font-medium text-sm">1mg Women's Multivitamin Immunity Booster Zinc, Vitamin C, Calcium, Vitamin D and Iron Tablet</p>
+                        <p class="text-xs text-gray-600 mt-2">Includes 35 tests</p>
+                    </div>
+                    <div class="flex items-center my-1">
+                        <p class="text-xs text-white bg-green-500 rounded px-1.5 py-0.5">4.9 <i class="far fa-star"></i></p>
+                        <p class="text-xs text-gray-600 uppercase ml-2">586 ratings</p>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-xs text-gray-500">MRP <span class="line-through">₹995</span></p>
+                        <p class="font-medium text-xs text-green-400 ml-2">45% off</p>
+                    </div>
+                    <p class="text-md font-medium">₹547</p>
+                </a>
+                <a href="#" class="border border-transparent hover:border-gray-300 transition duration-500 ease-in-out rounded-lg px-3 py-4">
+                    <img src="./img/1mg-salmon-omega-3-fish-oil-capsule.png" alt="1mg Salmon Omega 3 Fish Oil Capsule" class="mx-auto my-0">
+                    <div class="mt-5">
+                        <p class="tracking-tighter font-medium text-sm">1mg Salmon Omega 3 Fish Oil Capsule</p>
+                        <p class="text-xs text-gray-600 mt-2">Includes 35 tests</p>
+                    </div>
+                    <div class="flex items-center my-1">
+                        <p class="text-xs text-white bg-green-500 rounded px-1.5 py-0.5">4.9 <i class="far fa-star"></i></p>
+                        <p class="text-xs text-gray-600 uppercase ml-2">586 ratings</p>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-xs text-gray-500">MRP <span class="line-through">₹995</span></p>
+                        <p class="font-medium text-xs text-green-400 ml-2">45% off</p>
+                    </div>
+                    <p class="text-md font-medium">₹547</p>
+                </a>
+                <a href="#" class="border border-transparent hover:border-gray-300 transition duration-500 ease-in-out rounded-lg px-3 py-4">
+                    <img src="./img/1mg-apple-cider-vinegar-probiotic-plus-raw-unfiltered-unpasteurized-with-the-mother.png" alt="1mg Apple Cider Vinegar Probiotic Plus - Raw Unfiltered Unpasteurized with The Mother" class="mx-auto my-0">
+                    <div class="mt-5">
+                        <p class="tracking-tighter font-medium text-sm">1mg Apple Cider Vinegar Probiotic Plus - Raw Unfiltered Unpasteurized with The Mother</p>
+                        <p class="text-xs text-gray-600 mt-2">Includes 35 tests</p>
+                    </div>
+                    <div class="flex items-center my-1">
+                        <p class="text-xs text-white bg-green-500 rounded px-1.5 py-0.5">4.9 <i class="far fa-star"></i></p>
+                        <p class="text-xs text-gray-600 uppercase ml-2">586 ratings</p>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-xs text-gray-500">MRP <span class="line-through">₹995</span></p>
+                        <p class="font-medium text-xs text-green-400 ml-2">45% off</p>
+                    </div>
+                    <p class="text-md font-medium">₹547</p>
+                </a>
+                <a href="#" class="border border-transparent hover:border-gray-300 transition duration-500 ease-in-out rounded-lg px-3 py-4">
+                    <img src="./img/1mg-high-fiber-with-pre-probiotics-unflavoured-with-resistant-maltodextrin-inulin-and-guar-gum.png" alt="1mg High Fiber with Pre- & Probiotics Unflavoured with Resistant Maltodextrin, Inulin and Guar Gum" class="mx-auto my-0">
+                    <div class="mt-5">
+                        <p class="tracking-tighter font-medium text-sm">1mg High Fiber with Pre- & Probiotics Unflavoured with Resistant Maltodextrin, Inulin and Guar Gum</p>
+                        <p class="text-xs text-gray-600 mt-2">Includes 35 tests</p>
+                    </div>
+                    <div class="flex items-center my-1">
+                        <p class="text-xs text-white bg-green-500 rounded px-1.5 py-0.5">4.9 <i class="far fa-star"></i></p>
+                        <p class="text-xs text-gray-600 uppercase ml-2">586 ratings</p>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-xs text-gray-500">MRP <span class="line-through">₹995</span></p>
+                        <p class="font-medium text-xs text-green-400 ml-2">45% off</p>
+                    </div>
+                    <p class="text-md font-medium">₹547</p>
+                </a>
+                <a href="#" class="border border-transparent hover:border-gray-300 transition duration-500 ease-in-out rounded-lg px-3 py-4">
+                    <img src="./img/1mg-active-nutrition-mix-with-whey-protein-vitamin-d-choline-and-fiber-vanilla.jpg" alt="1mg Active Nutrition Mix with Whey Protein, Vitamin D, Choline and Fiber Vanilla" class="mx-auto my-0">
+                    <div class="mt-5">
+                        <p class="tracking-tighter font-medium text-sm">1mg Active Nutrition Mix with Whey Protein, Vitamin D, Choline and Fiber Vanilla</p>
+                        <p class="text-xs text-gray-600 mt-2">Includes 35 tests</p>
+                    </div>
+                    <div class="flex items-center my-1">
+                        <p class="text-xs text-white bg-green-500 rounded px-1.5 py-0.5">4.9 <i class="far fa-star"></i></p>
+                        <p class="text-xs text-gray-600 uppercase ml-2">586 ratings</p>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-xs text-gray-500">MRP <span class="line-through">₹995</span></p>
+                        <p class="font-medium text-xs text-green-400 ml-2">45% off</p>
+                    </div>
+                    <p class="text-md font-medium">₹547</p>
+                </a>
+                <a href="#" class="border border-transparent hover:border-gray-300 transition duration-500 ease-in-out rounded-lg px-3 py-4">
+                    <img src="./img/1mg-senior-50-multivitamin-immunity-booster-zinc-vitamin-c-calcium-and-vitamin-d-tablet.png" alt="1mg Senior 50+ Multivitamin Immunity Booster Zinc, Vitamin C, Calcium and Vitamin D Tablet" class="mx-auto my-0">
+                    <div class="mt-5">
+                        <p class="tracking-tighter font-medium text-sm">1mg Senior 50+ Multivitamin Immunity Booster Zinc, Vitamin C, Calcium and Vitamin D Tablet</p>
+                        <p class="text-xs text-gray-600 mt-2">Includes 35 tests</p>
+                    </div>
+                    <div class="flex items-center my-1">
+                        <p class="text-xs text-white bg-green-500 rounded px-1.5 py-0.5">4.9 <i class="far fa-star"></i></p>
+                        <p class="text-xs text-gray-600 uppercase ml-2">586 ratings</p>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-xs text-gray-500">MRP <span class="line-through">₹995</span></p>
+                        <p class="font-medium text-xs text-green-400 ml-2">45% off</p>
+                    </div>
+                    <p class="text-md font-medium">₹547</p>
+                </a>
+                <a href="#" class="border border-transparent hover:border-gray-300 transition duration-500 ease-in-out rounded-lg px-3 py-4">
+                    <img src="./img/1mg-ortho-electric-heating-gel-pad-with-auto-cut-quick-heating-feature.jpg" alt="1mg Ortho Electric Heating Gel Pad with Auto-Cut & Quick Heating Feature" class="mx-auto my-0">
+                    <div class="mt-5">
+                        <p class="tracking-tighter font-medium text-sm">1mg Ortho Electric Heating Gel Pad with Auto-Cut & Quick Heating Feature</p>
+                        <p class="text-xs text-gray-600 mt-2">Includes 35 tests</p>
+                    </div>
+                    <div class="flex items-center my-1">
+                        <p class="text-xs text-white bg-green-500 rounded px-1.5 py-0.5">4.9 <i class="far fa-star"></i></p>
+                        <p class="text-xs text-gray-600 uppercase ml-2">586 ratings</p>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-xs text-gray-500">MRP <span class="line-through">₹995</span></p>
+                        <p class="font-medium text-xs text-green-400 ml-2">45% off</p>
+                    </div>
+                    <p class="text-md font-medium">₹547</p>
+                </a>
+                <a href="#" class="border border-transparent hover:border-gray-300 transition duration-500 ease-in-out rounded-lg px-3 py-4">
+                    <img src="./img/1mg-pain-relief-oil-with-mahanarayana-for-instant-warming-anti-inflammation.png" alt="1mg Pain Relief Oil with Mahanarayana for Instant Warming & Anti-inflammation" class="mx-auto my-0">
+                    <div class="mt-5">
+                        <p class="tracking-tighter font-medium text-sm">1mg Pain Relief Oil with Mahanarayana for Instant Warming & Anti-inflammation</p>
+                        <p class="text-xs text-gray-600 mt-2">Includes 35 tests</p>
+                    </div>
+                    <div class="flex items-center my-1">
+                        <p class="text-xs text-white bg-green-500 rounded px-1.5 py-0.5">4.9 <i class="far fa-star"></i></p>
+                        <p class="text-xs text-gray-600 uppercase ml-2">586 ratings</p>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-xs text-gray-500">MRP <span class="line-through">₹995</span></p>
+                        <p class="font-medium text-xs text-green-400 ml-2">45% off</p>
+                    </div>
+                    <p class="text-md font-medium">₹547</p>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Ayurveda -->
+        <section class="mt-7">
+            <div class="sm:flex justify-start sm:justify-between mx-2 sm:mx-10 my-3">
+                <h4 class="font-medium">Ayurveda</h4>
+                <a href="#" class="font-medium uppercase bg-red-400 rounded text-white text-xs px-2 py-1">See all</a>
+            </div>
+            
+            <div class="bg-white p-5 ayurveda-slick-items">
+                <a href="#" class="border border-transparent hover:border-gray-300 hover:shadow-lg transition duration-500 ease-in-out rounded-lg">
+                    <img src="./img/iigmuhtavfeyl34sys0u.jpg" alt="Malkangani" class="rounded-t-lg">
+                    <div class=" px-3 py-4">
+                        <h5 class="tracking-tighter font-medium text-sm">Malkangani</h5>
+                        <p class="text-xs text-gray-600 mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+                </a>
+                <a href="#" class="border border-transparent hover:border-gray-300 hover:shadow-lg transition duration-500 ease-in-out rounded-lg">
+                    <img src="./img/tx3eulyzgfldbt7igzke.jpg" alt="Fennel Seeds" class="rounded-t-lg">
+                    <div class=" px-3 py-4">
+                        <h5 class="tracking-tighter font-medium text-sm">Fennel Seeds</h5>
+                        <p class="text-xs text-gray-600 mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+                </a>
+                <a href="#" class="border border-transparent hover:border-gray-300 hover:shadow-lg transition duration-500 ease-in-out rounded-lg">
+                    <img src="./img/qgyjmltpxtbcvd9yfcw0.jpg" alt="Alsi" class="rounded-t-lg">
+                    <div class=" px-3 py-4">
+                        <h5 class="tracking-tighter font-medium text-sm">Alsi</h5>
+                        <p class="text-xs text-gray-600 mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+                </a>
+                <a href="#" class="border border-transparent hover:border-gray-300 hover:shadow-lg transition duration-500 ease-in-out rounded-lg">
+                    <img src="./img/cdwvtxfp7jqq3hm6hhf3.jpg" alt="Shalparni" class="rounded-t-lg">
+                    <div class=" px-3 py-4">
+                        <h5 class="tracking-tighter font-medium text-sm">Shalparni</h5>
+                        <p class="text-xs text-gray-600 mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+                </a>
+                <a href="#" class="border border-transparent hover:border-gray-300 hover:shadow-lg transition duration-500 ease-in-out rounded-lg">
+                    <img src="./img/prncxs7zhvdk3imctkzk.jpg" alt="Apple cider vinegar" class="rounded-t-lg">
+                    <div class=" px-3 py-4">
+                        <h5 class="tracking-tighter font-medium text-sm">Apple cider vinegar</h5>
+                        <p class="text-xs text-gray-600 mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+                </a>
+                <a href="#" class="border border-transparent hover:border-gray-300 hover:shadow-lg transition duration-500 ease-in-out rounded-lg">
+                    <img src="./img/vxpisnzxqkzy93hvfvhu.jpg" alt="Daruharidra" class="rounded-t-lg">
+                    <div class=" px-3 py-4">
+                        <h5 class="tracking-tighter font-medium text-sm">Daruharidra</h5>
+                        <p class="text-xs text-gray-600 mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="mx-2 sm:mx-10 my-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+                <div class="mb-3">
+                    <p class="font-medium mb-3">Know Us</p>
+                    <ul>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">About Us</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Contact Us</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Press Coverage</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Business Partnership</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Careers</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Sehat Ke Sathi</a></li>
+                    </ul>
+                </div>
+                <div class="mb-3">
+                    <p class="font-medium mb-3">Our Policies</p>
+                    <ul>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Privacy Policy</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Terms and Conditions </a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Editorial Policy</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Return Policy</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">IP Policy</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Grievance Redressal Policy</a></li>
+                    </ul>
+                </div>
+                <div class="mb-3">
+                    <p class="font-medium mb-3">Our Services</p>
+                    <ul>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Order Medicines</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Book Lab Tests</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Consult a Doctor</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Ayurveda Articles</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">Hindi Articles</a></li>
+                        <li><a href="#" class="text-xs text-gray-600 hover:text-red-600 transition duration-300 ease-in-out">1mg Care Plan</a></li>
+                    </ul>
+                </div>
+                <div class="mb-3">
+                    <p class="font-medium mb-3">Connect</p>
+                    <p href="#" class="text-xs text-gray-600">Social Links</p>
+                    <ul class="flex">
+                        <li><a href="#" class="text-3xl hover:text-red-600 transition duration-300 ease-in-out mr-2"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#" class="text-3xl hover:text-red-600 transition duration-300 ease-in-out mr-2"><i class="fab fa-twitter-square"></i></a></li>
+                        <li><a href="#" class="text-3xl hover:text-red-600 transition duration-300 ease-in-out mr-2"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#" class="text-3xl hover:text-red-600 transition duration-300 ease-in-out mr-2"><i class="fab fa-instagram-square"></i></a></li>
+                        <li><a href="#" class="text-3xl hover:text-red-600 transition duration-300 ease-in-out mr-2"><i class="fab fa-youtube-square"></i></a></li>
+                    </ul>
+                    <p class="text-xs text-gray-600 mb-5">Want daily dose of health?</p>
+                    <p><a href="#" class="uppercase bg-red-400 text-white rounded font-bold px-3 py-2">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t-2 mb-5 bg-white">
+            <p class="text-xs text-gray-400 text-center font-semibold mt-5">© 2021 1mg. All rights reserved. In compliance with Drugs and Cosmetics Act, 1940 and Drugs and Cosmetics Rules, 1945, we don't process requests for Schedule X and other habit forming drugs.</p>
+        </div>
+    </footer>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
