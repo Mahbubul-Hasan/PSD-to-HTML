@@ -17,43 +17,49 @@
     <body>
         <div class="container player">
             <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex justify-content-start align-items-center">
+                <div class="d-flex justify-content-start align-items-center track-info">
                     <div class="track-thumbnail">
-                        <img src="./images/music-2.jpg" alt="Featured Tracks" class="img-fluid w-100" />
-                        <img src="./images/play-icon-png-transparent-14.jpg" alt="Featured Tracks" class="play-icon" />
+                        <img src="./images/music-2.jpg" alt="Featured Tracks" id="track_image" class="img-fluid w-100" />
+                        <!-- <img src="./images/play-icon-png-transparent-14.jpg" alt="Featured Tracks" class="play-icon" /> -->
                     </div>
                     <div class="ms-3">
-                        <p class="mb-0">Vanguard (Buy 1 Get 1 Free!)</p>
+                        <p id="title" class="title mb-0">Vanguard (Buy 1 Get 1 Free!)</p>
                         <p class="subtitle">Roddy Ricch – Please Excuse Me For Being Antisocial</p>
                     </div>
                 </div>
                 <div class="d-flex justify-content-evenly align-items-center controller">
-                    <p><i class="fas fa-backward"></i></p>
-                    <p><i class="fas fa-pause"></i></p>
-                    <p><i class="fas fa-forward"></i></p>
+                    <button onclick="previous_song()" id="previous"><i class="fa fa-backward"></i></button>
+                    <button onclick="just_play()" id="play"><i class="fa fa-play"></i></button>
+                    <button onclick="next_song()" id="next"><i class="fa fa-forward"></i></button>
                 </div>
 
-                <div class="d-flex justify-content-evenly">
-                    <p><i class="fas fa-random"></i></p>
-                    <p><i class="fas fa-exchange-alt"></i></p>
+                <div class="d-flex justify-content-evenly loop-shuffle">
+                    <button title="autoplay" id="autoplay-switcher" onclick="autoplay_control()"><i class="fas fa-exchange-alt"></i></button>
+                    <button title="loop" id="loop-switcher" class="active" onclick="loop_control()"><i class="fas fa-redo"></i></button>
+                    <button title="shuffle" id="shuffle-switcher" onclick="shuffle_control()"><i class="fas fa-random"></i></button>
                 </div>
 
                 <div class="d-flex justify-content-evenly align-items-center volume">
-                    <p><i class="fas fa-volume-down"></i></p>
-                    <p></p>
-                    <p><i class="fas fa-volume-up"></i></p>
+                    <button onclick="mute_sound()"><i class="fas fa-volume-down"></i></button>
+                    <p><input type="range" name="" id="volume" min="0" max="100" id="volume" onchange="volume_change()" /></p>
+                    <button onclick="full_sound()"><i class="fas fa-volume-up"></i></button>
                 </div>
 
-                <div class="d-flex justify-content-evenly">
-                    <p><i class="fas fa-comment-alt"></i></p>
-                    <p><i class="fas fa-list-ul"></i></p>
-                </div>
+                <!-- <div class="d-flex justify-content-evenly">
+                    <button><i class="fas fa-comment-alt"></i></button>
+                    <button><i class="fas fa-list-ul"></i></button>
+                </div> -->
             </div>
-            <div class="progress-bar" style="width: 30%"></div>
+            <div class="progress-bar">
+                <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()" />
+            </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <!-- bootstrap 5 -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+        <script src="./js/sctipt.js"></script>
+        <script src="./js/player.js"></script>
     </body>
 </html>
