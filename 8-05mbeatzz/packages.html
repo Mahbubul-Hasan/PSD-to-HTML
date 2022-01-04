@@ -47,7 +47,10 @@
                         </ul>
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                                <a class="nav-link add-to-cart-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>1</span>
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="far fa-user-circle"></i></a>
@@ -947,6 +950,69 @@
                 </div>
             </div>
         </footer>
+
+        <!-- cart modal -->
+        <div class="modal fade" id="cartModal">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Cart List</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body track-list">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="track-thumbnail">
+                                            <img src="./images/music-2.jpg" alt="Featured Tracks" class="img-fluid w-100" />
+                                            <img src="./images/play-icon-png-transparent-14.jpg" alt="Featured Tracks" class="play-icon" />
+                                        </div>
+                                        <span class="ms-3 td-title">Vanguard (Buy 1 Get 1 Free!)</span>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-danger"><i class="fas fa-times"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="track-thumbnail">
+                                            <img src="./images/music-2.jpg" alt="Featured Tracks" class="img-fluid w-100" />
+                                            <img src="./images/play-icon-png-transparent-14.jpg" alt="Featured Tracks" class="play-icon" />
+                                        </div>
+                                        <span class="ms-3 td-title">Vanguard (Buy 1 Get 1 Free!)</span>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-danger"><i class="fas fa-times"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="track-thumbnail">
+                                            <img src="./images/music-2.jpg" alt="Featured Tracks" class="img-fluid w-100" />
+                                            <img src="./images/play-icon-png-transparent-14.jpg" alt="Featured Tracks" class="play-icon" />
+                                        </div>
+                                        <span class="ms-3 td-title">Vanguard (Buy 1 Get 1 Free!)</span>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-danger"><i class="fas fa-times"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <!-- bootstrap 5 -->

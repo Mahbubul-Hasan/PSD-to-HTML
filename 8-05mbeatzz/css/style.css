@@ -41,16 +41,16 @@ body {
     background-repeat: no-repeat;
 }
 .hero.home {
-    background-image: linear-gradient(to right, rgba(41, 17, 187, 0.5), rgba(41, 17, 187, 0.5)), url("../images/unsplash_YrtFlrLo2DQ.png");
+    background-image: linear-gradient(to right, rgba(41, 17, 187, 0.5), rgba(41, 17, 187, 0.5)), url("../images/iStock-1203056288.jpg");
 }
 .hero.tracks {
-    background-image: url("../images/unsplash_fARVSWznseM.png");
+    background-image: linear-gradient(to right, rgba(41, 17, 187, 0.5), rgba(41, 17, 187, 0.5)), url("../images/iStock-541279162.jpg");
 }
 .hero.packages {
-    background-image: url("../images/unsplash_ekHSHvgr27k.png");
+    background-image: linear-gradient(to right, rgba(41, 17, 187, 0.5), rgba(41, 17, 187, 0.5)), url("../images/iStock-1071066072.jpg");
 }
 .hero.contact {
-    background-image: url("../images/unsplash_dKeB0-M9iiA.png");
+    background-image: linear-gradient(to right, rgba(41, 17, 187, 0.5), rgba(41, 17, 187, 0.5)), url("../images/iStock-155394693.jpg");
 }
 .hero.banner.home .container {
     height: 100vh;
@@ -105,6 +105,23 @@ body {
 }
 .hero.banner .social-media ul li a {
     color: #fff;
+}
+
+.add-to-cart-link {
+    position: relative;
+}
+.add-to-cart-link span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ffffff;
+    background-color: #bb2d3b;
+    font-size: 10px;
+    font-weight: 900;
+    width: 20px;
+    height: 20px;
+    padding: 3px 0px 0px 7px;
+    border-radius: 50%;
 }
 
 /* Header */
